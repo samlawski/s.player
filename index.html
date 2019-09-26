@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Don't allow zoom on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!-- Favicons and Theme -->
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- Web Application Manifest -->
+  <!-- <link rel="manifest" href="manifest.json"> -->
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="s.player">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="s.player">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="favicon/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#2F3BA2">
+  
+  <title>s.player</title>
+
+  <style>
+    a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+    body {
+      height: 100vh;
+      width: 100vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background-color: #3e403f;
+    }
+
+    button {
+      width: 80px;
+      height: 80px;
+      padding-left: 13px;
+
+      font-size: 2rem;
+
+      border: none;
+      border-radius: 50%;
+
+      background-color: #4fc289;
+      color: rgba(255,255,255,0.8);
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+
+      outline: none;
+      cursor: pointer;
+    }
+    button:active {
+      box-shadow: 0 0 3px rgba(0,0,0,0.4); 
+      color: rgba(255,255,255,0.5);
+    }    
+  </style>
+</head>
+<body>
+
+  <button onclick="playAudio()">&#9658;</button>
+  <script>
+    var filePath = 'sheep-ok-v1.mp3'
+    var audio = new Audio(filePath)
+
+    function playAudio(){
+      audio.play()
+    }
+  </script>
+</body>
+</html>
